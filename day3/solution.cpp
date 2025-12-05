@@ -43,17 +43,14 @@ void solution(const std::string& filename) {
         
         /* part 2 */
         std::stack<char> s;
-        char stack_size = 0;
         size_t len = battery.length();
         for(int i = 0; i < len; i++) {
-            while(!s.empty() && battery.at(i) - '0' > s.top() && 12 - stack_size < len - i) {
+            while(!s.empty() && battery.at(i) - '0' > s.top() && 12 - s.size() < len - i) {
                 s.pop();
-                stack_size--;
             }
 
-            if(stack_size < 12) {
+            if(s.size() < 12) {
                 s.push(battery.at(i) - '0');
-                stack_size++;
             }
         }
 
