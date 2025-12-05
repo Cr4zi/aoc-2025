@@ -65,7 +65,6 @@ void solution(const std::string& filename) {
             s.pop();
             i++;
         }
-        std::cout << val << std::endl;
         sum2 += val;
     }
 
