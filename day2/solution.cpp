@@ -58,7 +58,6 @@ void solution(const std::string& filename) {
         token = std::strtok(nullptr, "-");
         u64 end = std::stoll(token);
 
-        std::cout << start << "-" << end << std::endl;
         for(u64 i = start; i <= end; i++) {
             if(is_invalidp1(i))
                 sum1 += i;
